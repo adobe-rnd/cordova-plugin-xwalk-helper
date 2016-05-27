@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-xwalk-helper"
+        version="1.0.0">
+
+    <name>Crosswalk WebView Helper</name>
+    <description>Helper plugin for the CrossWalk webview</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,chromium,crosswalk,webview</keywords>
+    <repo>https://github.com/adobe-rnd/cordova-plugin-xwalk-helper.git</repo>
+
+    <engines>
+        <engine name="cordova-android" version=">=4"/>
+        <engine name="cordova-plugman" version=">=4.2.0"/><!-- needed for gradleReference support -->
+    </engines>
+
+    <js-module src="www/xwalk.js" name="XWalkPlugin">
+        <clobbers target="window.XWalk" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="XWalkPlugin">
+                <param name="android-package" value="org.crosswalk.cordova.XWalkCordovaPlugin"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/org/crosswalk/cordova/XWalkCordovaPlugin.java" target-dir="src/org/crosswalk/cordova"/>
+    </platform>
+</plugin>

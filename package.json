@@ -1,0 +1,36 @@
+{
+  "name": "cordova-plugin-xwalk-helper",
+  "version": "1.0.0",
+  "description": "Helper plugin for the CrossWalk webview",
+  "cordova": {
+    "id": "cordova-plugin-xwalk-helper",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe-rnd/cordova-plugin-xwalk-helper.git"
+  },
+  "keywords": [
+    "cordova",
+    "chromium",
+    "crosswalk",
+    "webview",
+    "engine",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova-android",
+      "version": ">=4"
+    },
+    {
+      "name": "cordova-plugman",
+      "version": ">=4.2.0"
+    }
+  ],
+  "author": "",
+  "license": "Apache 2.0"
+}
